@@ -1,0 +1,33 @@
+{
+  "name": "reveal-presentation",
+  "version": "0.1.0",
+  "description": "A reveal.js presentation",
+  "main": "index.js",
+  "author": "Declan Byrd",
+  "license": "MIT",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:react": "webpack --watch --mode development --devtool inline-source-map",
+    "dev:static": "browser-sync start --server --files 'static' --startPath 'static/index.html'",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-live": "^2.2.2",
+    "reveal.js": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "@babel/runtime": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.13",
+    "mermaid": "^8.8.2",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^5.3.1",
+    "webpack-cli": "^4.1.0"
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/reveal.js/dist/theme/moon.css"
+    />
+    <link rel="stylesheet" href="/node_modules/reveal.js/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <title>Reveal Presentation</title>
+  </head>
+  <body>
+    <aside class="webcam">
+      <video id="userVideo"></video>
+    </aside>
+    <div class="reveal">
+      <main class="slides">
+        <section>
+          <h1>Reveal.js</h1>
+          <p>A Declan Byrd experiment involving slideshows</p>
+          <aside class="notes">
+            Shhh, these are your private notes 📝
+          </aside>
+        </section>
+        <section>
+
+          <section>
+            <h2>Embed React components</h2>
+            <div id="counter"></div>
+          </section>
+          
+          <section>
+            <h2>Edit React components</h2>
+            <div id="liveData"></div>
+          </section>
+        </section>
+
+        <section>
+          <h2>Mermaid graphs</h2>
+          <div class="mermaid r-stretch">
+            graph TD 
+              A[Client] --> B[Load Balancer] 
+              B --> C[Server1] 
+              B --> D[Server2]
+          </div>
+        </section>
+
+        <section>
+          <h2>Code blocks</h2>
+          <p>With step by step code highlighting</p>
+          <pre><code data-line-numbers="1-4,6|7-10|5">
+            .sidebar {
+              width: 0;
+              transform: translatex(-100%);
+              transition: transform 400ms ease-out, width 400ms ease-out;
+            }
+
+            .sidebar[data-state="open"]{
+              width: 15rem;
+              transform: translatex(0)
+            }
+          </code></pre>
+        </section>
+
+        <section data-background-color="#000">
+          <h2>Custom backgrounds</h2>
+          <p>For slides that need greater emphasis 🐱‍👤</p>
+        </section>
+
+        <section data-background-image="./assets/images/mqtt-plugin.png"
+        data-background-size="contain">
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="./assets/scripts/presentation.js" type="module"></script>
+  <script src="./assets/scripts/react-components.js"></script>
+  <script src="../node_modules/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</html>
